@@ -47,7 +47,7 @@ export default function HeroHome() {
                     className="btn text-white bg-emerald-600 hover:bg-emerald-700 w-full group"
                     aria-label="Join VibeLingo on WhatsApp"
                   >
-                    Join on WhatsApp
+                    Contact on WhatsApp
                     <span className="tracking-normal text-emerald-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
                       -&gt;
                     </span>
