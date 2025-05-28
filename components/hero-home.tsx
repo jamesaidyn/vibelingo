@@ -1,14 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
-import VideoThumb from '@/public/images/hero-image-01.jpg'
-
-
-// Dynamically import the modal with client-side rendering only
-const ModalVideo01 = dynamic(() => import('@/components/modal-video-01'), {
-  ssr: false,
-})
+import Image from 'next/image'
+import ImageThumb from '@/public/images/vibe/splash_pic.png'
 
 export default function HeroHome() {
   return (
@@ -17,7 +11,6 @@ export default function HeroHome() {
       aria-labelledby="hero-heading"
       className="relative bg-slate-900 text-slate-100"
     >
-                    {/* In-Person Location Notice */}
       {/* Decorative background */}
       <div
         className="absolute inset-0 pointer-events-none -z-10 [clip-path:polygon(0_0,_5760px_0,_5760px_calc(100%_-_352px),_0_100%)]"
@@ -41,8 +34,6 @@ export default function HeroHome() {
                 </p>
               </header>
 
-
-
               {/* CTA buttons */}
               <nav
                 aria-label="Call to Action"
@@ -63,27 +54,30 @@ export default function HeroHome() {
                   </Link>
                 </div>
                 <div>
-                  <Link
-                    href="#how-it-works"
-                    className="btn text-white bg-slate-700 hover:bg-slate-800 w-full"
-                    aria-label="Watch how VibeLingo works"
-                  >
-                    How It Works
-                  </Link>
+              <Link
+                href="#how-it-works"
+                className="btn text-white bg-slate-700 hover:bg-slate-800 w-full"
+                aria-label="Watch how VibeLingo works"
+              >
+                How It Works
+              </Link>
+
                 </div>
               </nav>
             </div>
 
-            {/* Modal video image */}
-            <ModalVideo01
-              thumb={VideoThumb}
-              thumbWidth={540}
-              thumbHeight={405}
-              thumbAlt="Latin American student using ChatGPT Voice to practice English conversation"
-              video="/videos/vibelingo-intro.mp4"
-              videoWidth={1920}
-              videoHeight={1080}
-            />
+            {/* Static splash image */}
+            <div className="shrink-0" data-aos="fade-left">
+              <Image
+                src={ImageThumb}
+                alt="Illustration of a learner using VibeLingo"
+                width={540}
+                height={405}
+                className="rounded-lg shadow-lg"
+                priority
+              />
+            </div>
+
           </div>
         </div>
       </div>

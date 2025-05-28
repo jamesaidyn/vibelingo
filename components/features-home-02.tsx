@@ -91,7 +91,7 @@ export default function FeaturesHome02() {
                   className={`flex items-start text-left bg-white border-2 px-5 py-3 rounded-sm shadow-md transition duration-300 ease-in-out mb-3 ${
                     tab !== i + 1
                       ? 'border-transparent opacity-50 hover:opacity-75'
-                      : 'border-blue-500 opacity-100'
+                      : 'border-crimson-600 opacity-100'
                   }`}
                   onClick={(e) => {
                     e.preventDefault()
@@ -99,7 +99,7 @@ export default function FeaturesHome02() {
                   }}
                 >
                   <svg
-                    className="w-4 h-4 fill-current text-blue-600 shrink-0 mt-1 mr-4"
+                    className="w-4 h-4 fill-current text-crimson-500 shrink-0 mt-1 mr-4"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
                   >

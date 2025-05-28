@@ -16,8 +16,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-slate-900: #101d2d;
-  --color-test-900: #000000;
+  --color-slate-900: 	#1A1A1A;
+  --color-crimson-500: #e80545;
+  --color-crimson-600: #fe951b;
+
 
   --color-blue-500: #5696ff;
   --color-blue-600: #2174ea;

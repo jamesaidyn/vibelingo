@@ -74,7 +74,7 @@ export default function FeaturesHome() {
                         cx="28"
                         cy="28"
                         r="24"
-                        fill={tab === i ? '#2174EA' : '#5091EE'}
+                        fill={tab === i ? '#1A1A1A' : '#1A1A1A'}
                         fillOpacity={tab === i ? '1' : '0.64'}
                       />
                     </svg>

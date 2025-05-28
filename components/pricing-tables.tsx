@@ -29,9 +29,9 @@ export default function PricingTables() {
               href="https://wa.me/1234567890?text=Hi!%20I%20want%20to%20start%20the%20Free%20Start%20plan."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full group"
+              className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
             >
-              Join Free <span className="text-blue-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
+              Join Free <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
             </a>
           </div>
         </div>
@@ -64,9 +64,9 @@ export default function PricingTables() {
               href="https://wa.me/1234567890?text=Hi!%20I%20want%20Weekly%20Coaching%20for%207%20dollars."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full group"
+              className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
             >
-              Start Coaching <span className="text-blue-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
+              Start Coaching <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
             </a>
           </div>
         </div>
@@ -94,9 +94,9 @@ export default function PricingTables() {
               href="https://wa.me/1234567890?text=Hi!%20I%20want%20to%20book%20an%20AI%20Deep-Dive%20session."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full group"
+              className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
             >
-              Book Session <span className="text-blue-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
+              Book Session <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
             </a>
           </div>
         </div>
@@ -130,9 +130,9 @@ export default function PricingTables() {
               href="https://wa.me/1234567890?text=Hi!%20I%20want%20a%20Western%20English%20Audit%20for%20my%20store."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full group"
+              className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
             >
-              Get Audit <span className="text-blue-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
+              Get Audit <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
             </a>
           </div>
         </div>
@@ -159,9 +159,9 @@ export default function PricingTables() {
               href="https://wa.me/1234567890?text=Hi!%20I'm%20interested%20in%20Content%20Assistance%20for%20my%20videos."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full group"
+              className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
             >
-              Request Support <span className="text-blue-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
+              Request Support <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
             </a>
           </div>
         </div>

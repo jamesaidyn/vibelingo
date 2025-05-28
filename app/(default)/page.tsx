@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Home - Tidy',
+  title: 'Home - VibeLingo',
   description: 'Page description',
 }
 
@@ -22,7 +22,7 @@ export default function Home() {
       <Features02 />
       <Features03 />
       <PricingSection />
-      <Cta />
+      
     </>
   )
 }
