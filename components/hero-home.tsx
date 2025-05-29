@@ -3,15 +3,36 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import ImageThumb from '@/public/images/vibe/splash_pic.png'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function HeroHome() {
+  const { language } = useLanguage()
+
+  const t = {
+    heading: {
+      en: 'Speak English. Make Content. Meet the World.',
+      es: 'Habla inglés. Crea contenido. Conecta con el mundo.',
+    },
+    subheading: {
+      en: 'Learn English by doing — not memorizing. VibeLingo uses TikTok challenges, WhatsApp check-ins, and AI voice chats to help you sound natural, grow your audience, and connect globally.',
+      es: 'Aprende inglés haciendo — no memorizando. VibeLingo usa retos de TikTok, seguimientos por WhatsApp y chats de voz con IA para ayudarte a sonar natural, crecer tu audiencia y conectar globalmente.',
+    },
+    contact: {
+      en: 'Contact on WhatsApp',
+      es: 'Contáctanos por WhatsApp',
+    },
+    howItWorks: {
+      en: 'How It Works',
+      es: 'Cómo Funciona',
+    },
+  }
+
   return (
     <section
       id="hero"
       aria-labelledby="hero-heading"
       className="relative bg-slate-900 text-slate-100"
     >
-      {/* Decorative background */}
       <div
         className="absolute inset-0 pointer-events-none -z-10 [clip-path:polygon(0_0,_5760px_0,_5760px_calc(100%_-_352px),_0_100%)]"
         aria-hidden="true"
@@ -25,12 +46,10 @@ export default function HeroHome() {
             <div className="text-center md:text-left md:min-w-[30rem]" data-aos="fade-right">
               <header>
                 <h1 id="hero-heading" className="h1 font-playfair-display text-slate-100 mb-4">
-                  Speak English. Make Content. Meet the World.
+                  {t.heading[language]}
                 </h1>
                 <p className="text-xl text-slate-400 mb-8">
-                  Learn English by doing — not memorizing. VibeLingo uses TikTok challenges,
-                  WhatsApp check-ins, and AI voice chats to help you sound natural, grow your audience,
-                  and connect globally.
+                  {t.subheading[language]}
                 </p>
               </header>
 
@@ -47,21 +66,20 @@ export default function HeroHome() {
                     className="btn text-white bg-emerald-600 hover:bg-emerald-700 w-full group"
                     aria-label="Join VibeLingo on WhatsApp"
                   >
-                    Contact on WhatsApp
+                    {t.contact[language]}
                     <span className="tracking-normal text-emerald-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
                       -&gt;
                     </span>
                   </Link>
                 </div>
                 <div>
-              <Link
-                href="#how-it-works"
-                className="btn text-white bg-slate-700 hover:bg-slate-800 w-full"
-                aria-label="Watch how VibeLingo works"
-              >
-                How It Works
-              </Link>
-
+                  <Link
+                    href="#how-it-works"
+                    className="btn text-white bg-slate-700 hover:bg-slate-800 w-full"
+                    aria-label="Watch how VibeLingo works"
+                  >
+                    {t.howItWorks[language]}
+                  </Link>
                 </div>
               </nav>
             </div>
