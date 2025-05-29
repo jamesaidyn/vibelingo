@@ -59,7 +59,7 @@ const t = {
 }
 
 export default function FeaturesHome03() {
-  const  language  = 'en'
+  const { language } = useLanguage()
 
   return (
     <section className="relative">

@@ -3,7 +3,7 @@
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function PricingTables() {
-  const { language } = useLanguage()
+const { language } = useLanguage()
 
   /* ────────────────  Text dictionary  ──────────────── */
   const t = {

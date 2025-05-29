@@ -10,7 +10,7 @@ export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
   const trigger = useRef<HTMLButtonElement>(null)
   const mobileNav = useRef<HTMLDivElement>(null)
- const language = 'en'
+ const { language } = useLanguage()
 
   const t = {
     home: language === 'es' ? 'Inicio' : 'Home',

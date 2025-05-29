@@ -65,7 +65,7 @@ const t = {
 export default function FeaturesHome02() {
   const [tab, setTab] = useState(1)
  //const { language } = useLanguage()
-  const language = 'en'
+  const { language } = useLanguage()
 
   return (
     <section>

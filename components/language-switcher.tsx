@@ -4,9 +4,10 @@ import { useLanguage } from '@/context/LanguageContext'
 import Flag from 'react-world-flags'
 
 export default function LanguageSwitcher() {
-  const { language, toggleLanguage } = useLanguage()
+  const { language, toggleLanguage, ready } = useLanguage()
 
-  // Display current language
+  if (!ready) return null // Avoid hydration mismatch
+
   const flagCode = language === 'en' ? 'GB' : 'ES'
   const label = language === 'en' ? 'English' : 'Español'
 

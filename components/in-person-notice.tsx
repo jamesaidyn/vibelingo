@@ -4,7 +4,7 @@ import { useLanguage } from '@/context/LanguageContext'
 import { FaMapMarkerAlt, FaWhatsapp, FaBroadcastTower } from 'react-icons/fa'
 
 export default function InPersonNotice() {
-  const { language } = useLanguage()
+   const { language } = useLanguage()
   const liveStreamUrl = '' // <-- Add your stream URL here
 
   const t = {
