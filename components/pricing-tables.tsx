@@ -1,170 +1,201 @@
 'use client'
 
+import { useLanguage } from '@/context/LanguageContext'
+
 export default function PricingTables() {
-  return (
-    <div className="max-w-6xl mx-auto px-4">
-      
-      {/* Row 1 of 3 */}
-      <div className="max-w-sm mx-auto grid gap-8 lg:grid-cols-3 lg:gap-6 items-start lg:max-w-none pt-4 mb-12">
+  const { language: L } = useLanguage()
 
-        {/* Free Start */}
-        <div className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up">
-          <div className="mb-4 pb-4 border-b border-slate-200">
-            <div className="text-lg font-semibold text-slate-800 mb-1">Free Start</div>
-            <div className="inline-flex items-baseline mb-3">
-              <span className="h3 font-medium text-slate-500">$</span>
-              <span className="h2 leading-7 font-playfair-display text-slate-800">0</span>
-              <span className="font-medium text-slate-400"> / once</span>
-            </div>
-            <div className="text-slate-500">Follow-first model. Start learning with free videos, tasks, and challenges.</div>
+  /* ────────────────  Text dictionary  ──────────────── */
+  const t = {
+    free:   { en: 'Free Start',            es: 'Inicio Gratis' },
+    week:   { en: 'Weekly Coaching',       es: 'Coaching Semanal' },
+    ai:     { en: 'AI Deep-Dive',          es: 'Inmersión IA' },
+    audit:  { en: 'Western English Audit', es: 'Auditoría de Inglés Occidental' },
+    content:{ en: 'Content Assistance',    es: 'Asistencia de Contenido' },
+
+    once:   { en: '/ once',    es: '/ una vez' },
+    weekly: { en: '/ week',    es: '/ semana' },
+    hour:   { en: '/ hour',    es: '/ hora' },
+    proj:   { en: '/ project', es: '/ proyecto' },
+
+    includes: { en: 'Includes:', es: 'Incluye:' },
+
+    freeDesc:   {
+      en: 'Follow-first model. Start learning with free videos, tasks, and challenges.',
+      es: 'Modelo “síguenos primero”. Empieza con videos, tareas y retos gratuitos.',
+    },
+    weeklyDesc: {
+      en: 'Stay on track with a 10-min weekly call, voice feedback, and unlock our MP3 pack.',
+      es: 'Mantente al día con una llamada semanal de 10 min, feedback de voz y acceso al paquete MP3.',
+    },
+    aiDesc: {
+      en: 'Practice English live using ChatGPT Voice mode. You speak, we guide.',
+      es: 'Practica inglés en vivo con el modo de voz de ChatGPT. Tú hablas, nosotros guiamos.',
+    },
+    auditDesc: {
+      en: 'We’ll analyse your local store — signage, speech, tone — and suggest how to sound more native.',
+      es: 'Analizaremos tu tienda — letreros, discurso y tono — y te diremos cómo sonar más nativo.',
+    },
+    contentDesc: {
+      en: 'Need help editing videos or crafting engaging content in English? We’ve got you.',
+      es: '¿Necesitas ayuda editando videos o creando contenido atractivo en inglés? Te ayudamos.',
+    },
+
+    bullets: {
+      purpose:  { en: '✅ Purpose Talk',                 es: '✅ Charla de Propósito' },
+      playlist: { en: '🎥 Video playlists',              es: '🎥 Listas de reproducción' },
+      tasks:    { en: '📱 WhatsApp proof tasks',         es: '📱 Tareas de WhatsApp' },
+
+      check:    { en: '📞 Weekly check-ins',             es: '📞 Revisiones semanales' },
+      mp3:      { en: '🎧 Full MP3/MP4 pack access',     es: '🎧 Acceso completo a MP3/MP4' },
+      pron:     { en: '🗣️ Feedback on pronunciation',   es: '🗣️ Feedback de pronunciación' },
+      goals:    { en: '📲 WhatsApp goal tracking',       es: '📲 Seguimiento de objetivos' },
+
+      guided:   { en: '🧠 Guided voice sessions',        es: '🧠 Sesiones de voz guiadas' },
+      livePron: { en: '🗣️ Real-time pronunciation FB',  es: '🗣️ Pronunciación en tiempo real' },
+      convo:    { en: '🎓 Conversation training',        es: '🎓 Entrenamiento conversacional' },
+      pack5:    { en: '📦 5-hour pack: $35',             es: '📦 Paquete 5 h: $35' },
+
+      vibe:     { en: '🕵️ English vibe audit',          es: '🕵️ Auditoría de vibra' },
+      videoBio: { en: '📊 Video & bio feedback',         es: '📊 Feedback de video y bio' },
+      tips:     { en: '🎯 Accent, phrases, energy tips', es: '🎯 Consejos de acento y energía' },
+      deliver:  { en: '📥 Delivered in 48 hours',        es: '📥 Entrega en 48 h' },
+
+      edit:     { en: '✂️ Video editing tips/support',   es: '✂️ Consejos/soporte de edición' },
+      caption:  { en: '📄 Caption clean-up',             es: '📄 Limpieza de subtítulos' },
+      hooks:    { en: '🎬 Feedback on hooks & delivery', es: '🎬 Feedback en hooks y delivery' },
+      script:   { en: '🧑‍🎨 Script & story collaboration', es: '🧑‍🎨 Colaboración en guion e historia' },
+    },
+
+    cta: {
+      free:    { en: 'Join Free',       es: 'Únete Gratis' },
+      week:    { en: 'Start Coaching',  es: 'Empezar Coaching' },
+      ai:      { en: 'Book Session',    es: 'Reservar Sesión' },
+      audit:   { en: 'Get Audit',       es: 'Obtener Auditoría' },
+      content: { en: 'Request Support', es: 'Solicitar Soporte' },
+    },
+  }
+
+  const b = (k: keyof typeof t.bullets) => t.bullets[k][L]
+
+  /* ───────────── Card component scoped inside ───────────── */
+  function PlanCard({
+    title,
+    price,
+    suffix,
+    desc,
+    bullets,
+    cta,
+    wa,
+    delay = '0',
+  }: {
+    title: string
+    price: string
+    suffix: string
+    desc: string
+    bullets: string[]
+    cta: string
+    wa: string
+    delay?: string
+  }) {
+    return (
+      <div
+        className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg"
+        data-aos="fade-up"
+        {...(delay !== '0' && { 'data-aos-delay': delay })}
+      >
+        {/* Header */}
+        <div className="mb-4 pb-4 border-b border-slate-200">
+          <div className="text-lg font-semibold text-slate-800 mb-1">{title}</div>
+          <div className="inline-flex items-baseline mb-3">
+            <span className="h3 font-medium text-slate-500">$</span>
+            <span className="h2 leading-7 font-playfair-display text-slate-800">{price}</span>
+            <span className="font-medium text-slate-400"> {suffix}</span>
           </div>
-          <div className="font-medium mb-3">Includes:</div>
-          <ul className="text-slate-500 space-y-3 grow mb-6">
-            <li>✅ Purpose Talk</li>
-            <li>🎥 Video playlists</li>
-            <li>📱 WhatsApp proof tasks</li>
-          </ul>
-          <div className="p-3 rounded-sm bg-slate-50">
-            <a
-              href="https://wa.me/1234567890?text=Hi!%20I%20want%20to%20start%20the%20Free%20Start%20plan."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
-            >
-              Join Free <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
-            </a>
-          </div>
+          <div className="text-slate-500">{desc}</div>
         </div>
 
-        {/* Weekly Coaching */}
-        <div className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
-          {/*
-          <div className="absolute top-0 right-0 mr-6 -mt-4">
-            <div className="inline-flex text-sm font-semibold py-1 px-3 text-emerald-700 bg-emerald-200 rounded-full">Most Popular</div>
-          </div>
-           */}
-          <div className="mb-4 pb-4 border-b border-slate-200">
-            <div className="text-lg font-semibold text-slate-800 mb-1">Weekly Coaching</div>
-            <div className="inline-flex items-baseline mb-3">
-              <span className="h3 font-medium text-slate-500">$</span>
-              <span className="h2 leading-7 font-playfair-display text-slate-800">7</span>
-              <span className="font-medium text-slate-400"> / week</span>
-            </div>
-            <div className="text-slate-500">Stay on track with a 10-min weekly call, voice feedback, and unlock our MP3 pack.</div>
-          </div>
-          <div className="font-medium mb-3">Includes:</div>
-          <ul className="text-slate-500 space-y-3 grow mb-6">
-            <li>📞 Weekly check-ins</li>
-            <li>🎧 Full MP3/MP4 pack access</li>
-            <li>🗣️ Feedback on pronunciation</li>
-            <li>📲 WhatsApp goal tracking</li>
-          </ul>
-          <div className="p-3 rounded-sm bg-slate-50">
-            <a
-              href="https://wa.me/1234567890?text=Hi!%20I%20want%20Weekly%20Coaching%20for%207%20dollars."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
-            >
-              Start Coaching <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
-            </a>
-          </div>
-        </div>
+        <div className="font-medium mb-3">{t.includes[L]}</div>
+        <ul className="text-slate-500 space-y-3 grow mb-6">
+          {bullets.map((line) => (
+            <li key={line}>{line}</li>
+          ))}
+        </ul>
 
-        {/* AI Deep-Dive */}
-        <div className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up" data-aos-delay="200">
-          <div className="mb-4 pb-4 border-b border-slate-200">
-            <div className="text-lg font-semibold text-slate-800 mb-1">AI Deep-Dive</div>
-            <div className="inline-flex items-baseline mb-3">
-              <span className="h3 font-medium text-slate-500">$</span>
-              <span className="h2 leading-7 font-playfair-display text-slate-800">7</span>
-              <span className="font-medium text-slate-400"> / hour</span>
-            </div>
-            <div className="text-slate-500">Practice English live using ChatGPT Voice mode. You speak, we guide.</div>
-          </div>
-          <div className="font-medium mb-3">Includes:</div>
-          <ul className="text-slate-500 space-y-3 grow mb-6">
-            <li>🧠 Guided voice sessions</li>
-            <li>🗣️ Real-time pronunciation feedback</li>
-            <li>🎓 Conversation training</li>
-            <li>📦 5-hour pack: $35</li>
-          </ul>
-          <div className="p-3 rounded-sm bg-slate-50">
-            <a
-              href="https://wa.me/1234567890?text=Hi!%20I%20want%20to%20book%20an%20AI%20Deep-Dive%20session."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
-            >
-              Book Session <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
-            </a>
-          </div>
+        <div className="p-3 rounded-sm bg-slate-50">
+          <a
+            href={`https://wa.me/1234567890?text=Hi!%20I%20want%20${wa}.`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
+          >
+            {cta}{' '}
+            <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">
+              -&gt;
+            </span>
+          </a>
         </div>
       </div>
+    )
+  }
 
-      {/* Row 2 of 2 */}
+  /* ───────────── Render rows ───────────── */
+  return (
+    <div className="max-w-6xl mx-auto px-4">
+      {/* Row 1 */}
+      <div className="max-w-sm mx-auto grid gap-8 lg:grid-cols-3 lg:gap-6 items-start lg:max-w-none pt-4 mb-12">
+        <PlanCard
+          title={t.free[L]}
+          price="0"
+          suffix={t.once[L]}
+          desc={t.freeDesc[L]}
+          bullets={[b('purpose'), b('playlist'), b('tasks')]}
+          cta={t.cta.free[L]}
+          wa="the%20Free%20Start%20plan"
+        />
+        <PlanCard
+          title={t.week[L]}
+          price="7"
+          suffix={t.weekly[L]}
+          desc={t.weeklyDesc[L]}
+          bullets={[b('check'), b('mp3'), b('pron'), b('goals')]}
+          cta={t.cta.week[L]}
+          wa="Weekly%20Coaching"
+          delay="100"
+        />
+        <PlanCard
+          title={t.ai[L]}
+          price="7"
+          suffix={t.hour[L]}
+          desc={t.aiDesc[L]}
+          bullets={[b('guided'), b('livePron'), b('convo'), b('pack5')]}
+          cta={t.cta.ai[L]}
+          wa="an%20AI%20Deep-Dive%20session"
+          delay="200"
+        />
+      </div>
+
+      {/* Row 2 */}
       <div className="max-w-sm mx-auto grid gap-8 lg:grid-cols-3 lg:gap-6 items-start lg:max-w-none pt-4">
-
-        {/* Western English Audit */}
-        <div className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up">
-          <div className="mb-4 pb-4 border-b border-slate-200">
-            <div className="text-lg font-semibold text-slate-800 mb-1">Western English Audit</div>
-            <div className="inline-flex items-baseline mb-3">
-              <span className="h3 font-medium text-slate-500">$</span>
-              <span className="h2 leading-7 font-playfair-display text-slate-800">20</span>
-              <span className="font-medium text-slate-400"> / once</span>
-            </div>
-            <div className="text-slate-500">
-              We’ll analyze your local store (in the country you're currently in) — signage, speech, tone — and suggest how to sound more modern and native.
-            </div>
-          </div>
-          <div className="font-medium mb-3">Includes:</div>
-          <ul className="text-slate-500 space-y-3 grow mb-6">
-            <li>🕵️ English vibe audit</li>
-            <li>📊 Video & bio feedback</li>
-            <li>🎯 Accent, phrases, energy tips</li>
-            <li>📥 Delivered in 48 hours</li>
-          </ul>
-          <div className="p-3 rounded-sm bg-slate-50">
-            <a
-              href="https://wa.me/1234567890?text=Hi!%20I%20want%20a%20Western%20English%20Audit%20for%20my%20store."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
-            >
-              Get Audit <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
-            </a>
-          </div>
-        </div>
-
-        {/* Content Assistance */}
-        <div className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
-          <div className="mb-4 pb-4 border-b border-slate-200">
-            <div className="text-lg font-semibold text-slate-800 mb-1">Content Assistance</div>
-            <div className="inline-flex items-baseline mb-3">
-              <span className="h2 leading-7 font-playfair-display text-slate-800">TBD</span>
-              <span className="font-medium text-slate-400"> / project</span>
-            </div>
-            <div className="text-slate-500">Need help editing your videos or creating engaging content in English? We’ve got your back.</div>
-          </div>
-          <div className="font-medium mb-3">Includes:</div>
-          <ul className="text-slate-500 space-y-3 grow mb-6">
-            <li>✂️ Video editing tips or support</li>
-            <li>📄 English caption clean-up</li>
-            <li>🎬 Feedback on hooks & delivery</li>
-            <li>🧑‍🎨 Collaboration on scripts & stories</li>
-          </ul>
-          <div className="p-3 rounded-sm bg-slate-50">
-            <a
-              href="https://wa.me/1234567890?text=Hi!%20I'm%20interested%20in%20Content%20Assistance%20for%20my%20videos."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
-            >
-              Request Support <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
-            </a>
-          </div>
-        </div>
+        <PlanCard
+          title={t.audit[L]}
+          price="20"
+          suffix={t.once[L]}
+          desc={t.auditDesc[L]}
+          bullets={[b('vibe'), b('videoBio'), b('tips'), b('deliver')]}
+          cta={t.cta.audit[L]}
+          wa="a%20Western%20English%20Audit"
+        />
+        <PlanCard
+          title={t.content[L]}
+          price="TBD"
+          suffix={t.proj[L]}
+          desc={t.contentDesc[L]}
+          bullets={[b('edit'), b('caption'), b('hooks'), b('script')]}
+          cta={t.cta.content[L]}
+          wa="Content%20Assistance"
+          delay="100"
+        />
       </div>
     </div>
   )
