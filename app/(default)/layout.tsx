@@ -4,9 +4,9 @@ import { useEffect } from 'react'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import  InPersonNotice  from '@/components/in-person-notice'
 import Header from '@/components/ui/header'
 import Footer from '@/components/ui/footer'
+import { LanguageProvider } from '@/context/LanguageContext'
 
 export default function DefaultLayout({
   children,
@@ -25,7 +25,7 @@ export default function DefaultLayout({
 
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
-      
+      <LanguageProvider>
       <Header />
       
       <main className="grow">
@@ -35,6 +35,7 @@ export default function DefaultLayout({
       </main>
 
       <Footer />
+      </LanguageProvider>
     </div>
   )
 }

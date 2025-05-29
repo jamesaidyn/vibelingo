@@ -1,26 +1,22 @@
 'use client'
 
-import { useState } from 'react'
+import { useLanguage } from '@/context/LanguageContext'
 import Flag from 'react-world-flags'
 
 export default function LanguageSwitcher() {
-  const [lang, setLang] = useState<'en' | 'es'>('en')
+  const { language, toggleLanguage } = useLanguage()
 
-  const toggleLanguage = () => {
-    setLang(lang === 'en' ? 'es' : 'en')
-  }
-
-  const isEnglish = lang === 'en'
-  const flagCode = isEnglish ? 'ES' : 'GB'
-  const label = isEnglish ? 'Español' : 'English'
+  // Display current language
+  const flagCode = language === 'en' ? 'GB' : 'ES'
+  const label = language === 'en' ? 'English' : 'Español'
 
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium bg-slate-800 text-white rounded hover:bg-slate-700  transition"
+      className="px-3 py-2 text-sm font-medium bg-[#4b121b] text-white rounded hover:bg-[#6d1a26] transition flex items-center space-x-2"
       aria-label="Switch language"
     >
-      <Flag code={flagCode} style={{ width: '20px', height: '14px', borderRadius: '2px' }} />
+      <Flag code={flagCode} style={{ width: 20, height: 14 }} />
       <span>{label}</span>
     </button>
   )
