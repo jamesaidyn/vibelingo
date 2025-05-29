@@ -1,23 +1,48 @@
 'use client'
 
+import { useLanguage } from '@/context/LanguageContext'
 import { FaMapMarkerAlt, FaWhatsapp, FaBroadcastTower } from 'react-icons/fa'
 
 export default function InPersonNotice() {
-  const liveStreamUrl = '' // <-- Add your stream URL here when available
+  const { language: L } = useLanguage()
+  const liveStreamUrl = '' // <-- Add your stream URL here
+
+  const t = {
+    notice: {
+      en: 'Currently doing in-person meetings in',
+      es: 'Actualmente estamos haciendo reuniones presenciales en',
+    },
+    viewMap: {
+      en: 'View on Google Maps →',
+      es: 'Ver en Google Maps →',
+    },
+    contact: {
+      en: 'Contact on WhatsApp',
+      es: 'Contactar por WhatsApp',
+    },
+    liveSoon: {
+      en: 'Live Stream (Coming Soon)',
+      es: 'Transmisión en vivo (Próximamente)',
+    },
+    liveNow: {
+      en: 'Watch Live Stream',
+      es: 'Ver Transmisión en Vivo',
+    },
+  }
 
   return (
     <div className="w-full bg-emerald-600 text-white text-sm md:text-base py-2 px-4 flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4 sticky top-0 z-50">
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center space-x-2 text-center md:text-left">
         <FaMapMarkerAlt className="text-white" />
         <span>
-          Currently doing in-person meetings in <strong>Asunción, Paraguay</strong>.{' '}
+          {t.notice[L]} <strong>Asunción, Paraguay</strong>.{' '}
           <a
             href="https://www.google.com/maps/place/Asunción,+Paraguay"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-emerald-200"
           >
-            View on Google Maps →
+            {t.viewMap[L]}
           </a>
         </span>
       </div>
@@ -30,7 +55,7 @@ export default function InPersonNotice() {
         className="flex items-center space-x-1 bg-white text-emerald-700 px-3 py-1 rounded-md hover:bg-emerald-100 transition"
       >
         <FaWhatsapp className="text-green-500" />
-        <span>Contact on WhatsApp</span>
+        <span>{t.contact[L]}</span>
       </a>
 
       {/* Live Stream Button */}
@@ -42,12 +67,12 @@ export default function InPersonNotice() {
           className="flex items-center space-x-1 bg-white text-emerald-700 px-3 py-1 rounded-md hover:bg-emerald-100 transition"
         >
           <FaBroadcastTower className="text-red-500" />
-          <span>Watch Live Stream</span>
+          <span>{t.liveNow[L]}</span>
         </a>
       ) : (
         <div className="flex items-center space-x-1 bg-white text-slate-400 px-3 py-1 rounded-md cursor-not-allowed opacity-70">
           <FaBroadcastTower className="text-slate-400" />
-          <span>Live Stream (Coming Soon)</span>
+          <span>{t.liveSoon[L]}</span>
         </div>
       )}
     </div>
