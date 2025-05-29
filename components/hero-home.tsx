@@ -6,7 +6,7 @@ import ImageThumb from '@/public/images/vibe/splash_pic.png'
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function HeroHome() {
-  const { language } = useLanguage()
+ const language = 'en'
 
   const t = {
     heading: {

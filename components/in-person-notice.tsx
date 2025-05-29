@@ -4,7 +4,7 @@ import { useLanguage } from '@/context/LanguageContext'
 import { FaMapMarkerAlt, FaWhatsapp, FaBroadcastTower } from 'react-icons/fa'
 
 export default function InPersonNotice() {
-  const { language: L } = useLanguage()
+  const { language } = useLanguage()
   const liveStreamUrl = '' // <-- Add your stream URL here
 
   const t = {
@@ -35,14 +35,14 @@ export default function InPersonNotice() {
       <div className="flex items-center space-x-2 text-center md:text-left">
         <FaMapMarkerAlt className="text-white" />
         <span>
-          {t.notice[L]} <strong>Asunción, Paraguay</strong>.{' '}
+          {t.notice[language]} <strong>Asunción, Paraguay</strong>.{' '}
           <a
             href="https://www.google.com/maps/place/Asunción,+Paraguay"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-emerald-200"
           >
-            {t.viewMap[L]}
+            {t.viewMap[language]}
           </a>
         </span>
       </div>
@@ -55,7 +55,7 @@ export default function InPersonNotice() {
         className="flex items-center space-x-1 bg-white text-emerald-700 px-3 py-1 rounded-md hover:bg-emerald-100 transition"
       >
         <FaWhatsapp className="text-green-500" />
-        <span>{t.contact[L]}</span>
+        <span>{t.contact[language]}</span>
       </a>
 
       {/* Live Stream Button */}
@@ -67,12 +67,12 @@ export default function InPersonNotice() {
           className="flex items-center space-x-1 bg-white text-emerald-700 px-3 py-1 rounded-md hover:bg-emerald-100 transition"
         >
           <FaBroadcastTower className="text-red-500" />
-          <span>{t.liveNow[L]}</span>
+          <span>{t.liveNow[language]}</span>
         </a>
       ) : (
         <div className="flex items-center space-x-1 bg-white text-slate-400 px-3 py-1 rounded-md cursor-not-allowed opacity-70">
           <FaBroadcastTower className="text-slate-400" />
-          <span>{t.liveSoon[L]}</span>
+          <span>{t.liveSoon[language]}</span>
         </div>
       )}
     </div>

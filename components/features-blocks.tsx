@@ -3,8 +3,8 @@
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function FeaturesBlocks() {
-  const { language } = useLanguage()
-
+  //const { language } = useLanguage()
+const language = 'en'
   const t = {
     heading: {
       en: 'Why VibeLingo Works',

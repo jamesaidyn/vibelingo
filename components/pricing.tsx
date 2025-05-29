@@ -4,7 +4,7 @@ import PricingTables from './pricing-tables'
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function HeroPricing() {
-  const { language } = useLanguage()
+ const language = 'en'
 
   const t = {
     title: {

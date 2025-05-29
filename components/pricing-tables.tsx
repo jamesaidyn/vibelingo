@@ -3,7 +3,7 @@
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function PricingTables() {
-  const { language: L } = useLanguage()
+  const { language } = useLanguage()
 
   /* ────────────────  Text dictionary  ──────────────── */
   const t = {
@@ -76,7 +76,7 @@ export default function PricingTables() {
     },
   }
 
-  const b = (k: keyof typeof t.bullets) => t.bullets[k][L]
+  const b = (k: keyof typeof t.bullets) => t.bullets[k][language]
 
   /* ───────────── Card component scoped inside ───────────── */
   function PlanCard({
@@ -115,7 +115,7 @@ export default function PricingTables() {
           <div className="text-slate-500">{desc}</div>
         </div>
 
-        <div className="font-medium mb-3">{t.includes[L]}</div>
+        <div className="font-medium mb-3">{t.includes[language]}</div>
         <ul className="text-slate-500 space-y-3 grow mb-6">
           {bullets.map((line) => (
             <li key={line}>{line}</li>
@@ -145,31 +145,31 @@ export default function PricingTables() {
       {/* Row 1 */}
       <div className="max-w-sm mx-auto grid gap-8 lg:grid-cols-3 lg:gap-6 items-start lg:max-w-none pt-4 mb-12">
         <PlanCard
-          title={t.free[L]}
+          title={t.free[language]}
           price="0"
-          suffix={t.once[L]}
-          desc={t.freeDesc[L]}
+          suffix={t.once[language]}
+          desc={t.freeDesc[language]}
           bullets={[b('purpose'), b('playlist'), b('tasks')]}
-          cta={t.cta.free[L]}
+          cta={t.cta.free[language]}
           wa="the%20Free%20Start%20plan"
         />
         <PlanCard
-          title={t.week[L]}
+          title={t.week[language]}
           price="7"
-          suffix={t.weekly[L]}
-          desc={t.weeklyDesc[L]}
+          suffix={t.weekly[language]}
+          desc={t.weeklyDesc[language]}
           bullets={[b('check'), b('mp3'), b('pron'), b('goals')]}
-          cta={t.cta.week[L]}
+          cta={t.cta.week[language]}
           wa="Weekly%20Coaching"
           delay="100"
         />
         <PlanCard
-          title={t.ai[L]}
+          title={t.ai[language]}
           price="7"
-          suffix={t.hour[L]}
-          desc={t.aiDesc[L]}
+          suffix={t.hour[language]}
+          desc={t.aiDesc[language]}
           bullets={[b('guided'), b('livePron'), b('convo'), b('pack5')]}
-          cta={t.cta.ai[L]}
+          cta={t.cta.ai[language]}
           wa="an%20AI%20Deep-Dive%20session"
           delay="200"
         />
@@ -178,21 +178,21 @@ export default function PricingTables() {
       {/* Row 2 */}
       <div className="max-w-sm mx-auto grid gap-8 lg:grid-cols-3 lg:gap-6 items-start lg:max-w-none pt-4">
         <PlanCard
-          title={t.audit[L]}
+          title={t.audit[language]}
           price="20"
-          suffix={t.once[L]}
-          desc={t.auditDesc[L]}
+          suffix={t.once[language]}
+          desc={t.auditDesc[language]}
           bullets={[b('vibe'), b('videoBio'), b('tips'), b('deliver')]}
-          cta={t.cta.audit[L]}
+          cta={t.cta.audit[language]}
           wa="a%20Western%20English%20Audit"
         />
         <PlanCard
-          title={t.content[L]}
+          title={t.content[language]}
           price="TBD"
-          suffix={t.proj[L]}
-          desc={t.contentDesc[L]}
+          suffix={t.proj[language]}
+          desc={t.contentDesc[language]}
           bullets={[b('edit'), b('caption'), b('hooks'), b('script')]}
-          cta={t.cta.content[L]}
+          cta={t.cta.content[language]}
           wa="Content%20Assistance"
           delay="100"
         />

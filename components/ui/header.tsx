@@ -10,7 +10,7 @@ import { useLanguage } from '@/context/LanguageContext'
 
 
 export default function Header({ mode = 'dark' }: { mode?: string }) {
-  const { language } = useLanguage()
+ const language = 'en'
 
   const t = {
     home: {

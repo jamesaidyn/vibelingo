@@ -5,7 +5,7 @@ import { useLanguage } from '@/context/LanguageContext'
 import SocialIcons from '@/components/SocialIcons'
 
 export default function Footer() {
-  const { language } = useLanguage()
+   const language = 'en'
 
   const t = {
     copyright: language === 'en'
