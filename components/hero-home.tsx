@@ -4,9 +4,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ImageThumb from '@/public/images/vibe/splash_pic.png'
 import { useLanguage } from '@/context/LanguageContext'
+import { useWhatsApp } from '@/context/WhatsAppContext'
 
 export default function HeroHome() {
- const { language } = useLanguage()
+  const { language } = useLanguage()
+  const { number } = useWhatsApp()
 
   const t = {
     heading: {
@@ -26,6 +28,10 @@ export default function HeroHome() {
       es: 'Cómo Funciona',
     },
   }
+
+  const whatsappUrl = number
+    ? `https://wa.me/${number.replace(/^\+/, '')}?text=Hi!%20I%20want%20to%20join%20Vibe%20Lingo%20from%20the%20website`
+    : '#'
 
   return (
     <section
@@ -60,7 +66,7 @@ export default function HeroHome() {
               >
                 <div>
                   <Link
-                    href="https://wa.me/573001234567?text=Hi!%20I%20want%20to%20join%20Vibe%20Lingo%20from%20the%20website"
+                    href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn text-white bg-emerald-600 hover:bg-emerald-700 w-full group"

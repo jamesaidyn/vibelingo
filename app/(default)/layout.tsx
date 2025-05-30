@@ -7,6 +7,8 @@ import 'aos/dist/aos.css'
 import Header from '@/components/ui/header'
 import Footer from '@/components/ui/footer'
 import { LanguageProvider } from '@/context/LanguageContext'
+import { WhatsAppProvider } from '@/context/WhatsAppContext'
+
 
 export default function DefaultLayout({
   children,
@@ -25,7 +27,9 @@ export default function DefaultLayout({
 
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
+       
       <LanguageProvider>
+      <WhatsAppProvider>
       <Header />
       
       <main className="grow">
@@ -35,6 +39,7 @@ export default function DefaultLayout({
       </main>
 
       <Footer />
+      </WhatsAppProvider>
       </LanguageProvider>
     </div>
   )

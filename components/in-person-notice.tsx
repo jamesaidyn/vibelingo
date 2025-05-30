@@ -1,10 +1,12 @@
 'use client'
 
 import { useLanguage } from '@/context/LanguageContext'
+import { useWhatsApp } from '@/context/WhatsAppContext'
 import { FaMapMarkerAlt, FaWhatsapp, FaBroadcastTower } from 'react-icons/fa'
 
 export default function InPersonNotice() {
-   const { language } = useLanguage()
+  const { language } = useLanguage()
+  const { number } = useWhatsApp()
   const liveStreamUrl = '' // <-- Add your stream URL here
 
   const t = {
@@ -30,6 +32,11 @@ export default function InPersonNotice() {
     },
   }
 
+  // WhatsApp link
+  const whatsappUrl = number
+    ? `https://wa.me/${number.replace(/^\+/, '')}?text=Hola!%20Estoy%20interesado%20en%20una%20reunión%20en%20persona%20de%20VibeLingo`
+    : '#'
+
   return (
     <div className="w-full bg-emerald-600 text-white text-sm md:text-base py-2 px-4 flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4 sticky top-0 z-50">
       <div className="flex items-center space-x-2 text-center md:text-left">
@@ -49,7 +56,7 @@ export default function InPersonNotice() {
 
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/595981234567?text=Hola!%20Estoy%20interesado%20en%20una%20reunión%20en%20persona%20de%20VibeLingo"
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center space-x-1 bg-white text-emerald-700 px-3 py-1 rounded-md hover:bg-emerald-100 transition"

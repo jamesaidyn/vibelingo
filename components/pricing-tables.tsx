@@ -1,9 +1,11 @@
 'use client'
 
 import { useLanguage } from '@/context/LanguageContext'
+import { useWhatsApp } from '@/context/WhatsAppContext'
 
 export default function PricingTables() {
-const { language } = useLanguage()
+  const { language } = useLanguage()
+  const { number } = useWhatsApp()
 
   /* ────────────────  Text dictionary  ──────────────── */
   const t = {
@@ -78,7 +80,6 @@ const { language } = useLanguage()
 
   const b = (k: keyof typeof t.bullets) => t.bullets[k][language]
 
-  /* ───────────── Card component scoped inside ───────────── */
   function PlanCard({
     title,
     price,
@@ -98,13 +99,14 @@ const { language } = useLanguage()
     wa: string
     delay?: string
   }) {
+    const waNumber = number ? number.replace(/^\+/, '') : '1234567890'
+
     return (
       <div
         className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg"
         data-aos="fade-up"
         {...(delay !== '0' && { 'data-aos-delay': delay })}
       >
-        {/* Header */}
         <div className="mb-4 pb-4 border-b border-slate-200">
           <div className="text-lg font-semibold text-slate-800 mb-1">{title}</div>
           <div className="inline-flex items-baseline mb-3">
@@ -124,12 +126,12 @@ const { language } = useLanguage()
 
         <div className="p-3 rounded-sm bg-slate-50">
           <a
-            href={`https://wa.me/1234567890?text=Hi!%20I%20want%20${wa}.`}
+            href={`https://wa.me/${waNumber}?text=Hi!%20I%20want%20${wa}.`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
           >
-            {cta}{' '}
+            {cta}
             <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">
               -&gt;
             </span>
@@ -139,10 +141,8 @@ const { language } = useLanguage()
     )
   }
 
-  /* ───────────── Render rows ───────────── */
   return (
     <div className="max-w-6xl mx-auto px-4">
-      {/* Row 1 */}
       <div className="max-w-sm mx-auto grid gap-8 lg:grid-cols-3 lg:gap-6 items-start lg:max-w-none pt-4 mb-12">
         <PlanCard
           title={t.free[language]}
@@ -175,7 +175,6 @@ const { language } = useLanguage()
         />
       </div>
 
-      {/* Row 2 */}
       <div className="max-w-sm mx-auto grid gap-8 lg:grid-cols-3 lg:gap-6 items-start lg:max-w-none pt-4">
         <PlanCard
           title={t.audit[language]}
