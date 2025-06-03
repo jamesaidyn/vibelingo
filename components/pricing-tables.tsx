@@ -1,11 +1,11 @@
 'use client'
 
 import { useLanguage } from '@/context/LanguageContext'
-import { useWhatsApp } from '@/context/WhatsAppContext'
+import { useSocial } from '@/context/SocialProvider'
 
 export default function PricingTables() {
   const { language } = useLanguage()
-  const { number } = useWhatsApp()
+  const { whatsappLink } = useSocial()
 
   /* ────────────────  Text dictionary  ──────────────── */
   const t = {
@@ -99,7 +99,7 @@ export default function PricingTables() {
     wa: string
     delay?: string
   }) {
-    const waNumber = number ? number.replace(/^\+/, '') : '1234567890'
+   
 
     return (
       <div
@@ -126,7 +126,7 @@ export default function PricingTables() {
 
         <div className="p-3 rounded-sm bg-slate-50">
           <a
-            href={`https://wa.me/${waNumber}?text=Hi!%20I%20want%20${wa}.`}
+            href={`${whatsappLink}?text=Hi!%20I%20want%20${wa}.`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"

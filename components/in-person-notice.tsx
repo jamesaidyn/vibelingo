@@ -1,12 +1,12 @@
 'use client'
 
 import { useLanguage } from '@/context/LanguageContext'
-import { useWhatsApp } from '@/context/WhatsAppContext'
+import { useSocial } from '@/context/SocialProvider'
 import { FaMapMarkerAlt, FaWhatsapp, FaBroadcastTower } from 'react-icons/fa'
 
 export default function InPersonNotice() {
   const { language } = useLanguage()
-  const { number } = useWhatsApp()
+  const { whatsappLink } = useSocial()
   const liveStreamUrl = '' // <-- Add your stream URL here
 
   const t = {
@@ -33,9 +33,7 @@ export default function InPersonNotice() {
   }
 
   // WhatsApp link
-  const whatsappUrl = number
-    ? `https://wa.me/${number.replace(/^\+/, '')}?text=Hola!%20Estoy%20interesado%20en%20una%20reunión%20en%20persona%20de%20VibeLingo`
-    : '#'
+  const whatsappUrl = `${whatsappLink}?text=Hola!%20Estoy%20interesado%20en%20una%20reunión%20en%20persona%20de%20VibeLingo`
 
   return (
     <div className="w-full bg-emerald-600 text-white text-sm md:text-base py-2 px-4 flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4 sticky top-0 z-50">
