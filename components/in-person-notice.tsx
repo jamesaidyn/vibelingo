@@ -3,6 +3,7 @@
 import { useLanguage } from '@/context/LanguageContext'
 import { useSocial } from '@/context/SocialProvider'
 import { FaMapMarkerAlt, FaWhatsapp, FaBroadcastTower } from 'react-icons/fa'
+import SocialContactButtons from '@/components/SocialContactButtons'
 
 export default function InPersonNotice() {
   const { language } = useLanguage()
@@ -17,10 +18,6 @@ export default function InPersonNotice() {
     viewMap: {
       en: 'View on Google Maps →',
       es: 'Ver en Google Maps →',
-    },
-    contact: {
-      en: 'Contact on WhatsApp',
-      es: 'Contactar por WhatsApp',
     },
     liveSoon: {
       en: 'Live Stream (Coming Soon)',
@@ -52,16 +49,6 @@ export default function InPersonNotice() {
         </span>
       </div>
 
-      {/* WhatsApp Button */}
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center space-x-1 bg-white text-emerald-700 px-3 py-1 rounded-md hover:bg-emerald-100 transition"
-      >
-        <FaWhatsapp className="text-green-500" />
-        <span>{t.contact[language]}</span>
-      </a>
 
       {/* Live Stream Button */}
       {liveStreamUrl ? (
