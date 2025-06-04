@@ -1,17 +1,17 @@
 import './css/style.css'
-
 import { Inter, Playfair_Display } from 'next/font/google'
+import Providers from './providers'
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-  display: 'swap'
+  display: 'swap',
 })
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair-display',
-  display: 'swap'
+  display: 'swap',
 })
 
 export const metadata = {
@@ -26,8 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} font-inter antialiased bg-white text-slate-800 tracking-tight`}>
-        {children}
+      <body
+        className={`${inter.variable} ${playfair.variable} font-inter antialiased bg-white text-slate-800 tracking-tight`}
+      >
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

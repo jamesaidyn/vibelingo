@@ -1,6 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/context/LanguageContext'
+// @ts-ignore
 import Flag from 'react-world-flags'
 
 export default function LanguageSwitcher() {

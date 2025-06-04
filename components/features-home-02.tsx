@@ -82,27 +82,29 @@ export default function FeaturesHome02() {
             <div className="md:w-5/12 lg:w-1/2 order-1 md:order-none">
               <div className="relative flex flex-col" data-aos="fade-down">
                 {t.tabs.map((_, i) => (
-                  <Transition
-                    key={i}
-                    show={tab === i + 1}
-                    className="absolute w-full"
-                    enter="transition-opacity duration-500"
-                    enterFrom="opacity-0"
-                    enterTo="opacity-100"
-                    leave="transition-opacity duration-300"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                  >
-                    <div className="relative inline-flex flex-col">
-                      <Image
-                        className="md:max-w-none mx-auto rounded-sm"
-                        src={FeaturesImage}
-                        width={540}
-                        height={620}
-                        alt={`Step ${i + 1} visual`}
-                      />
-                    </div>
-                  </Transition>
+              <Transition
+                key={i}
+                show={tab === i + 1}
+                enter="transition-opacity duration-500"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-300"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <div className="absolute w-full">
+                  <div className="relative inline-flex flex-col">
+                    <Image
+                      className="md:max-w-none mx-auto rounded-sm"
+                      src={FeaturesImage}
+                      width={540}
+                      height={620}
+                      alt={`Step ${i + 1} visual`}
+                    />
+                  </div>
+                </div>
+              </Transition>
+
                 ))}
               </div>
             </div>

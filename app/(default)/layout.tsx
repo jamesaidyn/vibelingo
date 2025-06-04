@@ -6,8 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Header from '@/components/ui/header'
 import Footer from '@/components/ui/footer'
-import { LanguageProvider } from '@/context/LanguageContext'
-import { SocialProvider } from '@/context/SocialProvider'
+
 
 
 export default function DefaultLayout({
@@ -27,9 +26,7 @@ export default function DefaultLayout({
 
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
-       
-      <LanguageProvider>
-      <SocialProvider>
+
       <Header />
       
       <main className="grow">
@@ -39,8 +36,7 @@ export default function DefaultLayout({
       </main>
 
       <Footer />
-      </SocialProvider>
-      </LanguageProvider>
+
     </div>
   )
 }
