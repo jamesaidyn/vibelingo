@@ -1,0 +1,67 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "pricing": "Precios"
+  },
+  "home": {
+    "hero": {
+      "heading": "Habla Inglés. Crea Contenido. Conecta con el Mundo.",
+      "subheading": "Aprende inglés haciendo, no memorizando. VibeLingo utiliza retos de TikTok, seguimientos por WhatsApp y chats de voz con IA para ayudarte a sonar natural, hacer crecer tu audiencia y conectarte globalmente.",
+      "cta_whatsapp": "Contactar por WhatsApp",
+      "cta_how_it_works": "Cómo Funciona",
+      "image_alt": "Ilustración de un estudiante usando VibeLingo"
+    },
+     "features_blocks": {
+      "title": "¿Por qué funciona VibeLingo?",
+      "description": "No solo decimos 'memoriza esto'. Te damos comentarios, herramientas y un propósito real para aprender inglés.",
+      "items": [
+        {
+          "title": "No Solo Gramática",
+          "desc": "Enseñamos inglés con TikToks, chats de voz y conversaciones del mundo real, no con hojas de trabajo aleatorias."
+        },
+        {
+          "title": "Empieza con tu PORQUÉ",
+          "desc": "Antes que nada, hablamos de lo que el inglés hará por ti. Ese propósito te mantiene motivado."
+        },
+        {
+          "title": "Coaching de Voz con IA",
+          "desc": "Habla inglés con el modo de voz de ChatGPT; te guiaremos en vivo para desarrollar fluidez y confianza rápidamente."
+        },
+        {
+          "title": "Comentarios Semanales",
+          "desc": "Cada semana, haz un seguimiento y recibe comentarios personales sobre tu progreso. Es sencillo, comprensivo y flexible."
+        },
+        {
+          "title": "Aprendizaje Basado en Contenido",
+          "desc": "Aprenderás inglés creando contenido real: reels, historias, subtítulos e interacciones de la vida real."
+        },
+        {
+          "title": "Gratis para Empezar",
+          "desc": "Sin presión. Únete al grupo de WhatsApp, síguenos y comienza a aprender. Solo pagas cuando quieras apoyo en vivo."
+        }
+      ]
+    },
+        "features_home": {
+      "title": "Cómo se desarrolla tu viaje en inglés",
+      "description": "Aprende haciendo, no memorizando. Así es como se ve tu viaje: desde encontrar tu propósito hasta construir tu voz en inglés.",
+      "tabs": [
+        {
+          "title": "Comienza con un Propósito",
+          "description": "Antes de aprender cualquier cosa, definirás un PORQUÉ personal: una razón real para aprender inglés que te mantenga motivado. Podría ser por tu familia, el trabajo de tus sueños o tu marca personal."
+        },
+        {
+          "title": "Familiarízate, no te agobies",
+          "description": "En lugar de saltar a la gramática, comienzas viendo videos de YouTube seleccionados y listas de reproducción curadas. Absorbés sonidos, patrones y confianza, incluso si aún no hablas."
+        },
+        {
+          "title": "Empieza a hablar paso a paso",
+          "description": "Empezarás etiquetando objetos y enviando notas de voz. A medida que aumente tu confianza, practicarás situaciones reales como pedidos de comida o memes de voz con tu coach."
+        },
+        {
+          "title": "Crea, recibe comentarios, mejora",
+          "description": "Una vez que estés listo, publicarás tareas al estilo TikTok, hablarás con tus compañeros y te reunirás semanalmente con un coach que te brindará comentarios reales. Tu inglés crece con tu contenido."
+        }
+      ]
+    }
+  }
+}

@@ -1,4 +1,4 @@
-export default function FeaturesBlocks() {
+export default function FeaturesBlocks({ dict }: { dict: any }) {
   return (
     <section
       id="why-vibelingo-works"
@@ -11,10 +11,10 @@ export default function FeaturesBlocks() {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <header>
               <h2 id="features-heading" className="h2 font-playfair-display mb-4">
-                Why VibeLingo Works
+                {dict.home.features_blocks.title}
               </h2>
               <p className="text-xl text-slate-500">
-                We don’t just say “memorize this.” We give you feedback, tools, and a real purpose for learning English.
+                {dict.home.features_blocks.description}
               </p>
             </header>
           </div>
@@ -26,33 +26,8 @@ export default function FeaturesBlocks() {
             aria-label="VibeLingo Features"
           >
 
-            {/* Feature Item */}
-            {[
-              {
-                title: 'Not Just Grammar',
-                desc: 'We teach English with TikToks, voice chats, and real-world conversation — not random worksheets.',
-              },
-              {
-                title: 'Start With Your WHY',
-                desc: 'Before anything else, we talk about what English will do for you. That purpose keeps you motivated.',
-              },
-              {
-                title: 'AI Voice Coaching',
-                desc: 'Speak English with ChatGPT’s voice mode — we’ll guide you live to build fluency and confidence fast.',
-              },
-              {
-                title: 'Weekly Feedback',
-                desc: 'Each week, check in and get personal feedback on your progress. It’s simple, supportive, and flexible.',
-              },
-              {
-                title: 'Content-Based Learning',
-                desc: 'You’ll learn English by actually creating content — reels, stories, captions, and real-life interactions.',
-              },
-              {
-                title: 'Free to Start',
-                desc: 'No pressure. Join the WhatsApp group, follow us, and start learning. You only pay when you want live support.',
-              },
-            ].map((item, index) => (
+            {/* Feature Items mapped from the dictionary */}
+            {dict.home.features_blocks.items.map((item: any, index: number) => (
               <div
                 key={index}
                 className="relative"

@@ -4,7 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ImageThumb from '@/public/images/vibe/splash_pic.png'
 
-export default function HeroHome() {
+// 1. Accept the dict prop
+export default function HeroHome({ dict }: { dict: any }) {
   return (
     <section
       id="hero"
@@ -24,13 +25,13 @@ export default function HeroHome() {
             {/* Text content */}
             <div className="text-center md:text-left md:min-w-[30rem]" data-aos="fade-right">
               <header>
+                {/* 2. Replace the Heading */}
                 <h1 id="hero-heading" className="h1 font-playfair-display text-slate-100 mb-4">
-                  Speak English. Make Content. Meet the World.
+                  {dict.home.hero.heading}
                 </h1>
+                {/* 3. Replace the Subheading */}
                 <p className="text-xl text-slate-400 mb-8">
-                  Learn English by doing — not memorizing. VibeLingo uses TikTok challenges,
-                  WhatsApp check-ins, and AI voice chats to help you sound natural, grow your audience,
-                  and connect globally.
+                  {dict.home.hero.subheading}
                 </p>
               </header>
 
@@ -47,7 +48,8 @@ export default function HeroHome() {
                     className="btn text-white bg-emerald-600 hover:bg-emerald-700 w-full group"
                     aria-label="Join VibeLingo on WhatsApp"
                   >
-                    Contact on WhatsApp
+                    {/* 4. Replace WhatsApp Button Text */}
+                    {dict.home.hero.cta_whatsapp}
                     <span className="tracking-normal text-emerald-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
                       -&gt;
                     </span>
@@ -59,7 +61,8 @@ export default function HeroHome() {
                 className="btn text-white bg-slate-700 hover:bg-slate-800 w-full"
                 aria-label="Watch how VibeLingo works"
               >
-                How It Works
+                {/* 5. Replace How it Works Button Text */}
+                {dict.home.hero.cta_how_it_works}
               </Link>
 
                 </div>
@@ -70,7 +73,8 @@ export default function HeroHome() {
             <div className="shrink-0" data-aos="fade-left">
               <Image
                 src={ImageThumb}
-                alt="Illustration of a learner using VibeLingo"
+                // 6. Replace Image Alt Text
+                alt={dict.home.hero.image_alt}
                 width={540}
                 height={405}
                 className="rounded-lg shadow-lg"

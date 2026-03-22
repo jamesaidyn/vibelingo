@@ -1,0 +1,67 @@
+{
+  "navigation": {
+    "home": "Home",
+    "pricing": "Pricing"
+  },
+  "home": {
+    "hero": {
+      "heading": "Speak English. Make Content. Meet the World.",
+      "subheading": "Learn English by doing — not memorizing. VibeLingo uses TikTok challenges, WhatsApp check-ins, and AI voice chats to help you sound natural, grow your audience, and connect globally.",
+      "cta_whatsapp": "Contact on WhatsApp",
+      "cta_how_it_works": "How It Works",
+      "image_alt": "Illustration of a learner using VibeLingo"
+    },
+        "features_blocks": {
+      "title": "Why VibeLingo Works",
+      "description": "We don’t just say “memorize this.” We give you feedback, tools, and a real purpose for learning English.",
+      "items": [
+        {
+          "title": "Not Just Grammar",
+          "desc": "We teach English with TikToks, voice chats, and real-world conversation — not random worksheets."
+        },
+        {
+          "title": "Start With Your WHY",
+          "desc": "Before anything else, we talk about what English will do for you. That purpose keeps you motivated."
+        },
+        {
+          "title": "AI Voice Coaching",
+          "desc": "Speak English with ChatGPT’s voice mode — we’ll guide you live to build fluency and confidence fast."
+        },
+        {
+          "title": "Weekly Feedback",
+          "desc": "Each week, check in and get personal feedback on your progress. It’s simple, supportive, and flexible."
+        },
+        {
+          "title": "Content-Based Learning",
+          "desc": "You’ll learn English by actually creating content — reels, stories, captions, and real-life interactions."
+        },
+        {
+          "title": "Free to Start",
+          "desc": "No pressure. Join the WhatsApp group, follow us, and start learning. You only pay when you want live support."
+        }
+      ]
+    },
+      "features_home": {
+      "title": "How Your English Journey Unfolds",
+      "description": "Learn by doing, not memorizing. This is how your journey looks — from finding your purpose to building your voice in English.",
+      "tabs": [
+        {
+          "title": "Start with Purpose",
+          "description": "Before learning anything, you’ll define a personal WHY — a real reason to learn English that keeps you motivated. It could be for your family, your dream job, or your online brand."
+        },
+        {
+          "title": "Get Familiar, Not Overwhelmed",
+          "description": "Instead of jumping into grammar, you start by watching selected YouTube videos and curated playlists. You absorb sounds, patterns, and confidence — even if you don’t speak yet."
+        },
+        {
+          "title": "Begin Speaking in Small Steps",
+          "description": "You’ll start by labeling objects and sending voice notes. As your confidence builds, you’ll practice real situations like food orders or voice memes with your coach."
+        },
+        {
+          "title": "Create, Get Feedback, Improve",
+          "description": "Once you’re ready, you’ll post TikTok-style assignments, talk to peers, and meet weekly with a coach who gives real feedback. Your English grows with your content."
+        }
+      ]
+    }
+  }
+}
