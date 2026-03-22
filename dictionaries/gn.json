@@ -1,0 +1,182 @@
+{
+  "navigation": {
+    "home": "Ñepyrũ",
+    "pricing": "Repy"
+  },
+  "home": {
+    "hero": {
+      "heading": "Eñe'ẽ Inglés. Ejapo Contenido. Eikuaa ko Yvy.",
+      "subheading": "Eñemoarandu inglés-pe ejapóvo — ndaha'éi emongorávo ne akãmente. VibeLingo oipuru TikTok, WhatsApp, ha AI ñemongeta nepytyvõ hag̃ua eñe'ẽ porã, emongakuaa ne aty ha eñemboja yvypóra ndive ko yvy tuichakue javeve.",
+      "cta_whatsapp": "Eñe'ẽ WhatsApp-pe",
+      "cta_how_it_works": "Mba'éichapa oiko",
+      "image_alt": "Ta'ãnga peteĩ temimbo'e oipurúva VibeLingo"
+    },
+    "features_blocks": {
+      "title": "Mba'érepa oiko VibeLingo",
+      "description": "Ndoroe'ẽi ndéve 'emongora ne akãme kóva'. Rome'ẽ ndéve pytyvõ, tembipuru ha peteĩ mba'ére añetegua eñemoarandu hag̃ua inglés.",
+      "items": [
+        {
+          "title": "Ndaha'éi Gramática añónte",
+          "desc": "Rombo'e inglés TikTok, ñemongeta ha tape añetegua rupive — ndaha'éi kuatia rei rupive."
+        },
+        {
+          "title": "Eñepyrũ ne MBA'ÉRE ndive",
+          "desc": "Mba'eve mboyve, ñañemongeta mba'épa ojapóta inglés nderehe. Upe mba'ére nemomýita tapiaite."
+        },
+        {
+          "title": "AI Ñe'ẽ Ñepytyvõ",
+          "desc": "Eñe'ẽ inglés ChatGPT ndive — roisãmbyhýta upépe voi eñe'ẽ porã ha pya'e hag̃ua."
+        },
+        {
+          "title": "Pytyvõ Ñavõ Arapokõindy",
+          "desc": "Ñavõ arapokõindy, ehechauka mba'éichapa reho ha eikuaa ne rembiapokue. Ndahasýi, nepytyvõ ha ikatu oñemoambue."
+        },
+        {
+          "title": "Mbo'epy Contenido rupive",
+          "desc": "Eñemoarandúta inglés-pe ejapóvo contenido añetegua — reels, stories, jehai ha ñemongeta hapicha ndive."
+        },
+        {
+          "title": "Rei eñepyrũ hag̃ua",
+          "desc": "Ndaipóri apuro. Eike WhatsApp atýpe, oremuñá, ha eñepyrũ eñemoarandu. Ehepyme'ẽta reipotárõ añónte pytyvõ oikovéva."
+        }
+      ]
+    },
+    "features_home": {
+      "title": "Mba'éichapa oho ne tape inglés-pe",
+      "description": "Eñemoarandu ejapóvo, ndaha'éi emongorávo ne akãme. Péicha oho ne tape — eheka ne mba'ére ha emopu'ã ne ñe'ẽ inglés-pe.",
+      "tabs": [
+        {
+          "title": "Eñepyrũ Mba'ére ndive",
+          "description": "Eñemoarandu mboyve, ehecháta peteĩ MBA'ÉRE — peteĩ mba'ére añetegua eñemoarandu hag̃ua inglés nemomýiva. Ikatu ne pehenguekuérare, ne mba'apo reipotáva, térã ne marka internet-pe."
+        },
+        {
+          "title": "Eikuaa raẽ, Ani eñeñandu vai",
+          "description": "Gramática mboyve, eñepyrũta ehecha YouTube videos ha playlists. Eikuaáta mba'éichapa oñe'ẽ, ha eñeñandu porãta — ne'ĩra eñe'ẽ ramo jepe."
+        },
+        {
+          "title": "Eñepyrũ Eñe'ẽ Mbeguekatúpe",
+          "description": "Eñepyrũta emoĩ héra umi mba'épe ha emondo ñe'ẽ. Eñeñandu porãvove, ejapóta umi mba'e añetegua ñemongetaháicha oñekuave'ẽvo tembi'u térã ñemongeta ne pytyvõhára ndive."
+        },
+        {
+          "title": "Ejapo, Eikuaa ne rembiapokue, Eñemoakãrapu'ã",
+          "description": "Eĩ vove, emondóta tembiapo TikTok-icha, eñemongetáta ne irũnguéra ndive, ha eñotỹta ñavõ arapokõindy peteĩ pytyvõhára ndive. Ne inglés okakuaa ne contenido ndive."
+        }
+      ]
+    },
+    "features_home_02": {
+      "title": "Mba'ére guive Ñakãrapu'ã meve",
+      "description": "VibeLingo ndaha'éi regla apokue — ha'e py'amokyre'ỹ añetegua, jehechauka tapiaite, ha pytyvõ iporãva oikóva ne rekovépe.",
+      "column_title": "Mba'éichapa añete oiko",
+      "tabs": [
+        {
+          "title": "Eheka ne MBA'ÉRE",
+          "description": "Mboyve eñepyrũ, ehecháta ne mba'ére añetegua. Viaje, mba'apo, térã pehengue — ne MBA'ÉRE nepytyvõta tapiaite."
+        },
+        {
+          "title": "Eikuaa Raẽ",
+          "description": "Eipurúta umi arapokõindy tenondegua ehecha hag̃ua playlists eikuaa hag̃ua umi ñe'ẽ — ndaipóri apuro eñe'ẽ hag̃ua."
+        },
+        {
+          "title": "Emongakuaa Contenido ndive",
+          "description": "Eñepyrũta ejapo contenido (duets, jehai, memes) ha eñemongeta ñavõ arapokõindy WhatsApp rupive eikuaa hag̃ua ne rembiapokue ne pytyvõhára ndive."
+        }
+      ]
+    },
+    "features_home_03": {
+      "title": "Eñemoarandu inglés ejapóvo, ndaha'éi emongorávo ne akãme",
+      "articles": [
+        {
+          "title": "Eñe'ẽ Yguaicha",
+          "description": "Ore AI ñemongeta ha roleplays ñavõ arapokõindy nepytyvõ eñe'ẽ hag̃ua añeteguaicha — ndaha'éi robot-icha. Eikuaa ñe'ẽ pyahu, acentos, ha jerovia.",
+          "image_alt": "Eñe'ẽ yguaicha"
+        },
+        {
+          "title": "Ejapo Eñemoarandu hag̃ua",
+          "description": "Gramática kuatia rangue, emondóta reels, emyesakãta memes, ha emondóta ñe'ẽ — opa mba'e inglés añeteguápe.",
+          "image_alt": "Ejapo inglés-pe"
+        },
+        {
+          "title": "Aty = Tapiaite",
+          "description": "Tembiapo WhatsApp-pe ñavõ arapokõindy ha apañuãi atýpe nepytyvõ eho porã hag̃ua. Nde ndereĩ nandi ne tape ñemoarandúpe.",
+          "image_alt": "WhatsApp aty ñemoarandu"
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Eñepyrũ reiete. Ehepyme'ẽ okakuaa vove añónte.",
+      "subtitle": "VibeLingo rei eñepyrũ hag̃ua — eipe'a mbo'epy emondóvo contenido, ndaha'éi ehepyme'ẽvo. Ehepyme'ẽ pytyvõ oñemomba'ehaguéva térã tembipuru iporãvéva eipotárõ añónte.",
+      "includes_label": "Oguereko:",
+      "plans": {
+        "free": {
+          "name": "Ñepyrũ Rei",
+          "price": "0",
+          "billing": "/ peteĩ jevy",
+          "desc": "Modelo eikuaa raẽ hag̃ua. Eñepyrũ eñemoarandu videos rei, tembiapo ha apañuãi ndive.",
+          "features": [
+            "✅ Ñemongeta Mba'ére",
+            "🎥 Videos playlists",
+            "📱 WhatsApp tembiapo jehechauka"
+          ],
+          "button": "Eike Reiete",
+          "whatsapp_msg": "Mba'éichapa! Aipota aike pe Ñepyrũ Rei plan-pe."
+        },
+        "weekly": {
+          "name": "Coaching Ñavõ Arapokõindy",
+          "price": "7",
+          "billing": "/ arapokõindy",
+          "desc": "Eho porã tapiaite peteĩ 10 min ñemongeta ñavõ arapokõindy ndive, ñe'ẽ pytyvõ, ha eipe'a ore MP3 pack.",
+          "features": [
+            "📞 Ñemongeta ñavõ arapokõindy",
+            "🎧 Oguereko opaite MP3/MP4 pack",
+            "🗣️ Pytyvõ eñe'ẽ porã hag̃ua",
+            "📲 WhatsApp ñemoakãrapu'ã"
+          ],
+          "button": "Eñepyrũ Coaching",
+          "whatsapp_msg": "Mba'éichapa! Aipota pe Coaching Ñavõ Arapokõindy 7 dólares-re."
+        },
+        "ai": {
+          "name": "AI Ñemongeta Pypuku",
+          "price": "7",
+          "billing": "/ aravo",
+          "desc": "Eñe'ẽ inglés oikovéva eipurúvo ChatGPT Voice mode. Nde eñe'ẽ, ore roisãmbyhy.",
+          "features": [
+            "🧠 Ñemongeta isãmbyhýva",
+            "🗣️ Pytyvõ eñe'ẽ porã hag̃ua upe javete",
+            "🎓 Ñemongeta mbo'epy",
+            "📦 5-aravo pack: $35"
+          ],
+          "button": "Ejapo Ne Ñemongeta",
+          "whatsapp_msg": "Mba'éichapa! Aipota ajapo peteĩ AI Ñemongeta Pypuku."
+        },
+        "audit": {
+          "name": "Auditoría Inglés Occidental",
+          "price": "20",
+          "billing": "/ peteĩ jevy",
+          "desc": "Rohecháta ne ñemuha (pe tetã reĩhame) — letrero, ñe'ẽ — ha ro'éta mba'éichapa eñe'ẽ porãve ha yguaicha.",
+          "features": [
+            "🕵️ Auditoría inglés vibe",
+            "📊 Video ha bio pytyvõ",
+            "🎯 Acento, ñe'ẽ, ñemokyre'ỹ",
+            "📥 Oñemondo 48 aravo ryepýpe"
+          ],
+          "button": "Aipota Auditoría",
+          "whatsapp_msg": "Mba'éichapa! Aipota peteĩ Auditoría Inglés Occidental che ñemuhápe g̃uarã."
+        },
+        "content": {
+          "name": "Pytyvõ Contenido-pe",
+          "price": "Ojehecháta",
+          "billing": "/ proyecto",
+          "desc": "Eikotevẽpa pytyvõ emoporã hag̃ua ne videos térã ejapo hag̃ua contenido iporãva inglés-pe? Ore roipytyvõta ndéve.",
+          "features": [
+            "✂️ Video ñemoporã pytyvõ",
+            "📄 Inglés caption ñemopotĩ",
+            "🎬 Pytyvõ hooks ha ñe'ẽme",
+            "🧑‍🎨 Ñemba'apo oñondive scripts-pe"
+          ],
+          "button": "Ejerure Pytyvõ",
+          "whatsapp_msg": "Mba'éichapa! Aipota pe Pytyvõ Contenido-pe che videos-pe g̃uarã."
+        }
+      }
+    }
+  }
+}

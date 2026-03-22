@@ -19,7 +19,7 @@ import Cta from '@/components/cta'
 export default async function Home({
   params,
 }: {
-  params: Promise<{ lang: 'en' | 'es' }>
+  params: Promise<{ lang: 'en' | 'es' | 'gn' }>
 }) {
   // 3. Await the params and load the dictionary
   const resolvedParams = await params

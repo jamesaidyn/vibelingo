@@ -2,21 +2,15 @@ import AosInit from '@/components/utils/aos-init'
 import Header from '@/components/ui/header'
 import Footer from '@/components/ui/footer'
 
-// Helper to fetch the right JSON file
-const getDictionary = async (lang: 'en' | 'es') => {
-  const dictionaries = {
-    en: () => import('@/dictionaries/en.json').then((module) => module.default),
-    es: () => import('@/dictionaries/es.json').then((module) => module.default),
-  }
-  return dictionaries[lang]()
-}
+// 1. Import your global helper instead of redefining it here!
+import { getDictionary } from '@/dictionaries/get-dictionary'
 
 export default async function DefaultLayout({
   children,
   params
 }: {
   children: React.ReactNode
-  params: Promise<{ lang: 'en' | 'es' }> // Type as a Promise for Next 15
+  params: Promise<{ lang: 'en' | 'es' | 'gn' }> // 2. Add 'gn' to the allowed types
 }) {  
   // Await the params
   const resolvedParams = await params
