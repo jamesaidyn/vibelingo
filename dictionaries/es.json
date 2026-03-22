@@ -62,6 +62,25 @@
           "description": "Una vez que estés listo, publicarás tareas al estilo TikTok, hablarás con tus compañeros y te reunirás semanalmente con un coach que te brindará comentarios reales. Tu inglés crece con tu contenido."
         }
       ]
+    },
+        "features_home_02": {
+      "title": "Del Propósito al Progreso",
+      "description": "VibeLingo no se trata de reglas, sino de motivación real, exposición constante y comentarios creativos que se adaptan a tu vida.",
+      "column_title": "Cómo Funciona Realmente",
+      "tabs": [
+        {
+          "title": "Define tu PORQUÉ",
+          "description": "Antes de cualquier práctica de inglés, definirás tu propósito personal. Ya sea viajar, trabajar por cuenta propia o la familia, tu PORQUÉ te mantendrá constante."
+        },
+        {
+          "title": "Familiarízate Primero",
+          "description": "Pasarás las primeras semanas viendo listas de reproducción seleccionadas para reconocer patrones y sonidos, sin presión por hablar todavía."
+        },
+        {
+          "title": "Crece con Contenido",
+          "description": "Comenzarás a crear contenido (como dúos, subtítulos, memes) mientras realizas seguimientos semanales por WhatsApp para recibir comentarios reales de tu coach."
+        }
+      ]
     }
   }
 }

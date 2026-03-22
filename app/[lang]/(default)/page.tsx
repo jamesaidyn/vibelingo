@@ -33,7 +33,7 @@ export default async function Home({
       {/* These stay as they are until you are ready to translate them */}
       <FeaturesBlocks dict={dict} />
       <Features dict={dict}/>
-      <Features02 />
+      <Features02 dict={dict}/>
       <Features03 />
       <PricingSection />
     </>

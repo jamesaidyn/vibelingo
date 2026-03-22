@@ -62,6 +62,25 @@
           "description": "Once you’re ready, you’ll post TikTok-style assignments, talk to peers, and meet weekly with a coach who gives real feedback. Your English grows with your content."
         }
       ]
+    },
+        "features_home_02": {
+      "title": "From Purpose to Progress",
+      "description": "VibeLingo isn’t about rules — it’s about real motivation, consistent exposure, and creative feedback that fits your life.",
+      "column_title": "How it Actually Works",
+      "tabs": [
+        {
+          "title": "Define Your WHY",
+          "description": "Before any English practice, you’ll define your personal purpose. Whether it’s traveling, freelancing, or family — your WHY will keep you consistent."
+        },
+        {
+          "title": "Familiarize First",
+          "description": "You’ll spend the first few weeks watching curated playlists to recognize patterns and sounds — no pressure to speak yet."
+        },
+        {
+          "title": "Grow With Content",
+          "description": "You’ll start making content (like duets, captions, memes) while checking in weekly via WhatsApp for real feedback from your coach."
+        }
+      ]
     }
   }
 }
