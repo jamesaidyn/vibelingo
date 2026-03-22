@@ -81,6 +81,78 @@
           "description": "You’ll start making content (like duets, captions, memes) while checking in weekly via WhatsApp for real feedback from your coach."
         }
       ]
+    },
+        "features_home_03": {
+      "title": "Learn English by creating, not cramming",
+      "articles": [
+        {
+          "title": "Speak Like a Local",
+          "description": "Our AI voice chats and weekly roleplays help you sound real — not robotic. Learn modern phrases, accents, and confidence.",
+          "image_alt": "Speak Naturally"
+        },
+        {
+          "title": "Create to Learn",
+          "description": "Instead of grammar worksheets, you’ll post reels, explain memes, and record voice notes — all in real English.",
+          "image_alt": "Create in English"
+        },
+        {
+          "title": "Community = Consistency",
+          "description": "Weekly WhatsApp tasks and group challenges keep you on track. You're never alone in your learning journey.",
+          "image_alt": "WhatsApp community learning"
+        }
+      ]
+    },
+        "pricing": {
+      "title": "Start free. Pay only when you're growing.",
+      "subtitle": "VibeLingo is free to start — you unlock lessons by posting, not paying. Only pay for personalized coaching or advanced tools when you’re ready.",
+      "includes_label": "Includes:",
+      "plans": {
+        "free": {
+          "name": "Free Start",
+          "price": "0",
+          "billing": "/ once",
+          "desc": "Follow-first model. Start learning with free videos, tasks, and challenges.",
+          "features": ["✅ Purpose Talk", "🎥 Video playlists", "📱 WhatsApp proof tasks"],
+          "button": "Join Free",
+          "whatsapp_msg": "Hi! I want to start the Free Start plan."
+        },
+        "weekly": {
+          "name": "Weekly Coaching",
+          "price": "7",
+          "billing": "/ week",
+          "desc": "Stay on track with a 10-min weekly call, voice feedback, and unlock our MP3 pack.",
+          "features": ["📞 Weekly check-ins", "🎧 Full MP3/MP4 pack access", "🗣️ Feedback on pronunciation", "📲 WhatsApp goal tracking"],
+          "button": "Start Coaching",
+          "whatsapp_msg": "Hi! I want Weekly Coaching for 7 dollars."
+        },
+        "ai": {
+          "name": "AI Deep-Dive",
+          "price": "7",
+          "billing": "/ hour",
+          "desc": "Practice English live using ChatGPT Voice mode. You speak, we guide.",
+          "features": ["🧠 Guided voice sessions", "🗣️ Real-time pronunciation feedback", "🎓 Conversation training", "📦 5-hour pack: $35"],
+          "button": "Book Session",
+          "whatsapp_msg": "Hi! I want to book an AI Deep-Dive session."
+        },
+        "audit": {
+          "name": "Western English Audit",
+          "price": "20",
+          "billing": "/ once",
+          "desc": "We’ll analyze your local store (in the country you're currently in) — signage, speech, tone — and suggest how to sound more modern and native.",
+          "features": ["🕵️ English vibe audit", "📊 Video & bio feedback", "🎯 Accent, phrases, energy tips", "📥 Delivered in 48 hours"],
+          "button": "Get Audit",
+          "whatsapp_msg": "Hi! I want a Western English Audit for my store."
+        },
+        "content": {
+          "name": "Content Assistance",
+          "price": "TBD",
+          "billing": "/ project",
+          "desc": "Need help editing your videos or creating engaging content in English? We’ve got your back.",
+          "features": ["✂️ Video editing tips or support", "📄 English caption clean-up", "🎬 Feedback on hooks & delivery", "🧑‍🎨 Collaboration on scripts & stories"],
+          "button": "Request Support",
+          "whatsapp_msg": "Hi! I'm interested in Content Assistance for my videos."
+        }
+      }
     }
   }
 }

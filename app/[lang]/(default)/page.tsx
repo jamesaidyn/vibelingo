@@ -34,8 +34,8 @@ export default async function Home({
       <FeaturesBlocks dict={dict} />
       <Features dict={dict}/>
       <Features02 dict={dict}/>
-      <Features03 />
-      <PricingSection />
+      <Features03 dict={dict} />
+      <PricingSection dict={dict}/>
     </>
   )
 }

@@ -81,6 +81,78 @@
           "description": "Comenzarás a crear contenido (como dúos, subtítulos, memes) mientras realizas seguimientos semanales por WhatsApp para recibir comentarios reales de tu coach."
         }
       ]
+    },
+        "features_home_03": {
+      "title": "Aprende inglés creando, no memorizando",
+      "articles": [
+        {
+          "title": "Habla como un local",
+          "description": "Nuestros chats de voz con IA y juegos de rol semanales te ayudan a sonar real, no robótico. Aprende frases modernas, acentos y confianza.",
+          "image_alt": "Habla con naturalidad"
+        },
+        {
+          "title": "Crea para aprender",
+          "description": "En lugar de hojas de trabajo de gramática, publicarás reels, explicarás memes y grabarás notas de voz, todo en inglés real.",
+          "image_alt": "Crea en inglés"
+        },
+        {
+          "title": "Comunidad = Consistencia",
+          "description": "Las tareas semanales de WhatsApp y los desafíos grupales te mantienen en el camino correcto. Nunca estás solo en tu viaje de aprendizaje.",
+          "image_alt": "Aprendizaje en comunidad por WhatsApp"
+        }
+      ]
+    },
+        "pricing": {
+      "title": "Comienza gratis. Paga solo cuando estés creciendo.",
+      "subtitle": "VibeLingo es gratuito para comenzar: desbloqueas lecciones publicando, no pagando. Solo paga por coaching personalizado o herramientas avanzadas cuando estés listo.",
+      "includes_label": "Incluye:",
+      "plans": {
+        "free": {
+          "name": "Inicio Gratuito",
+          "price": "0",
+          "billing": "/ una vez",
+          "desc": "Modelo de seguimiento primero. Comienza a aprender con videos, tareas y desafíos gratuitos.",
+          "features": ["✅ Charla de Propósito", "🎥 Listas de reproducción", "📱 Tareas de prueba por WhatsApp"],
+          "button": "Únete Gratis",
+          "whatsapp_msg": "¡Hola! Quiero comenzar con el plan de Inicio Gratuito."
+        },
+        "weekly": {
+          "name": "Coaching Semanal",
+          "price": "7",
+          "billing": "/ semana",
+          "desc": "Mantente en el camino con una llamada semanal de 10 minutos, feedback de voz y acceso a nuestro pack MP3.",
+          "features": ["📞 Seguimientos semanales", "🎧 Acceso total al pack MP3/MP4", "🗣️ Feedback de pronunciación", "📲 Seguimiento de metas por WhatsApp"],
+          "button": "Empezar Coaching",
+          "whatsapp_msg": "¡Hola! Quiero el Coaching Semanal por 7 dólares."
+        },
+        "ai": {
+          "name": "Inmersión con IA",
+          "price": "7",
+          "billing": "/ hora",
+          "desc": "Practica inglés en vivo usando el modo de voz de ChatGPT. Tú hablas, nosotros te guiamos.",
+          "features": ["🧠 Sesiones de voz guiadas", "🗣️ Feedback de pronunciación en tiempo real", "🎓 Entrenamiento de conversación", "📦 Pack de 5 horas: $35"],
+          "button": "Reservar Sesión",
+          "whatsapp_msg": "¡Hola! Quiero reservar una sesión de Inmersión con IA."
+        },
+        "audit": {
+          "name": "Auditoría de Inglés Occidental",
+          "price": "20",
+          "billing": "/ una vez",
+          "desc": "Analizaremos tu tienda local (en el país donde estés): cartelería, habla, tono, y sugeriremos cómo sonar más moderno y nativo.",
+          "features": ["🕵️ Auditoría de vibe en inglés", "📊 Feedback de video y biografía", "🎯 Consejos de acento, frases y energía", "📥 Entrega en 48 horas"],
+          "button": "Obtener Auditoría",
+          "whatsapp_msg": "¡Hola! Quiero una Auditoría de Inglés Occidental para mi tienda."
+        },
+        "content": {
+          "name": "Asistencia de Contenido",
+          "price": "TBD",
+          "billing": "/ proyecto",
+          "desc": "¿Necesitas ayuda editando tus videos o creando contenido atractivo en inglés? Te apoyamos.",
+          "features": ["✂️ Consejos o apoyo en edición de video", "📄 Limpieza de subtítulos en inglés", "🎬 Feedback sobre ganchos y entrega", "🧑‍🎨 Colaboración en guiones e historias"],
+          "button": "Solicitar Apoyo",
+          "whatsapp_msg": "¡Hola! Estoy interesado en Asistencia de Contenido para mis videos."
+        }
+      }
     }
   }
 }

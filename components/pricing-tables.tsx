@@ -1,6 +1,9 @@
 'use client'
 
-export default function PricingTables() {
+export default function PricingTables({ dict }: { dict: any }) {
+  // Shortcut to make the code cleaner
+  const pricing = dict.home.pricing
+
   return (
     <div className="max-w-6xl mx-auto px-4">
       
@@ -10,63 +13,57 @@ export default function PricingTables() {
         {/* Free Start */}
         <div className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up">
           <div className="mb-4 pb-4 border-b border-slate-200">
-            <div className="text-lg font-semibold text-slate-800 mb-1">Free Start</div>
+            <div className="text-lg font-semibold text-slate-800 mb-1">{pricing.plans.free.name}</div>
             <div className="inline-flex items-baseline mb-3">
               <span className="h3 font-medium text-slate-500">$</span>
-              <span className="h2 leading-7 font-playfair-display text-slate-800">0</span>
-              <span className="font-medium text-slate-400"> / once</span>
+              <span className="h2 leading-7 font-playfair-display text-slate-800">{pricing.plans.free.price}</span>
+              <span className="font-medium text-slate-400"> {pricing.plans.free.billing}</span>
             </div>
-            <div className="text-slate-500">Follow-first model. Start learning with free videos, tasks, and challenges.</div>
+            <div className="text-slate-500">{pricing.plans.free.desc}</div>
           </div>
-          <div className="font-medium mb-3">Includes:</div>
+          <div className="font-medium mb-3">{pricing.includes_label}</div>
           <ul className="text-slate-500 space-y-3 grow mb-6">
-            <li>✅ Purpose Talk</li>
-            <li>🎥 Video playlists</li>
-            <li>📱 WhatsApp proof tasks</li>
+            {pricing.plans.free.features.map((feature: string, index: number) => (
+              <li key={index}>{feature}</li>
+            ))}
           </ul>
           <div className="p-3 rounded-sm bg-slate-50">
             <a
-              href="https://wa.me/1234567890?text=Hi!%20I%20want%20to%20start%20the%20Free%20Start%20plan."
+              href={`https://wa.me/1234567890?text=${encodeURIComponent(pricing.plans.free.whatsapp_msg)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
             >
-              Join Free <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
+              {pricing.plans.free.button} <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
             </a>
           </div>
         </div>
 
         {/* Weekly Coaching */}
         <div className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
-          {/*
-          <div className="absolute top-0 right-0 mr-6 -mt-4">
-            <div className="inline-flex text-sm font-semibold py-1 px-3 text-emerald-700 bg-emerald-200 rounded-full">Most Popular</div>
-          </div>
-           */}
           <div className="mb-4 pb-4 border-b border-slate-200">
-            <div className="text-lg font-semibold text-slate-800 mb-1">Weekly Coaching</div>
+            <div className="text-lg font-semibold text-slate-800 mb-1">{pricing.plans.weekly.name}</div>
             <div className="inline-flex items-baseline mb-3">
               <span className="h3 font-medium text-slate-500">$</span>
-              <span className="h2 leading-7 font-playfair-display text-slate-800">7</span>
-              <span className="font-medium text-slate-400"> / week</span>
+              <span className="h2 leading-7 font-playfair-display text-slate-800">{pricing.plans.weekly.price}</span>
+              <span className="font-medium text-slate-400"> {pricing.plans.weekly.billing}</span>
             </div>
-            <div className="text-slate-500">Stay on track with a 10-min weekly call, voice feedback, and unlock our MP3 pack.</div>
+            <div className="text-slate-500">{pricing.plans.weekly.desc}</div>
           </div>
-          <div className="font-medium mb-3">Includes:</div>
+          <div className="font-medium mb-3">{pricing.includes_label}</div>
           <ul className="text-slate-500 space-y-3 grow mb-6">
-            <li>📞 Weekly check-ins</li>
-            <li>🎧 Full MP3/MP4 pack access</li>
-            <li>🗣️ Feedback on pronunciation</li>
-            <li>📲 WhatsApp goal tracking</li>
+            {pricing.plans.weekly.features.map((feature: string, index: number) => (
+              <li key={index}>{feature}</li>
+            ))}
           </ul>
           <div className="p-3 rounded-sm bg-slate-50">
             <a
-              href="https://wa.me/1234567890?text=Hi!%20I%20want%20Weekly%20Coaching%20for%207%20dollars."
+              href={`https://wa.me/1234567890?text=${encodeURIComponent(pricing.plans.weekly.whatsapp_msg)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
             >
-              Start Coaching <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
+              {pricing.plans.weekly.button} <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
             </a>
           </div>
         </div>
@@ -74,29 +71,28 @@ export default function PricingTables() {
         {/* AI Deep-Dive */}
         <div className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up" data-aos-delay="200">
           <div className="mb-4 pb-4 border-b border-slate-200">
-            <div className="text-lg font-semibold text-slate-800 mb-1">AI Deep-Dive</div>
+            <div className="text-lg font-semibold text-slate-800 mb-1">{pricing.plans.ai.name}</div>
             <div className="inline-flex items-baseline mb-3">
               <span className="h3 font-medium text-slate-500">$</span>
-              <span className="h2 leading-7 font-playfair-display text-slate-800">7</span>
-              <span className="font-medium text-slate-400"> / hour</span>
+              <span className="h2 leading-7 font-playfair-display text-slate-800">{pricing.plans.ai.price}</span>
+              <span className="font-medium text-slate-400"> {pricing.plans.ai.billing}</span>
             </div>
-            <div className="text-slate-500">Practice English live using ChatGPT Voice mode. You speak, we guide.</div>
+            <div className="text-slate-500">{pricing.plans.ai.desc}</div>
           </div>
-          <div className="font-medium mb-3">Includes:</div>
+          <div className="font-medium mb-3">{pricing.includes_label}</div>
           <ul className="text-slate-500 space-y-3 grow mb-6">
-            <li>🧠 Guided voice sessions</li>
-            <li>🗣️ Real-time pronunciation feedback</li>
-            <li>🎓 Conversation training</li>
-            <li>📦 5-hour pack: $35</li>
+            {pricing.plans.ai.features.map((feature: string, index: number) => (
+              <li key={index}>{feature}</li>
+            ))}
           </ul>
           <div className="p-3 rounded-sm bg-slate-50">
             <a
-              href="https://wa.me/1234567890?text=Hi!%20I%20want%20to%20book%20an%20AI%20Deep-Dive%20session."
+              href={`https://wa.me/1234567890?text=${encodeURIComponent(pricing.plans.ai.whatsapp_msg)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
             >
-              Book Session <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
+              {pricing.plans.ai.button} <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
             </a>
           </div>
         </div>
@@ -108,31 +104,28 @@ export default function PricingTables() {
         {/* Western English Audit */}
         <div className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up">
           <div className="mb-4 pb-4 border-b border-slate-200">
-            <div className="text-lg font-semibold text-slate-800 mb-1">Western English Audit</div>
+            <div className="text-lg font-semibold text-slate-800 mb-1">{pricing.plans.audit.name}</div>
             <div className="inline-flex items-baseline mb-3">
               <span className="h3 font-medium text-slate-500">$</span>
-              <span className="h2 leading-7 font-playfair-display text-slate-800">20</span>
-              <span className="font-medium text-slate-400"> / once</span>
+              <span className="h2 leading-7 font-playfair-display text-slate-800">{pricing.plans.audit.price}</span>
+              <span className="font-medium text-slate-400"> {pricing.plans.audit.billing}</span>
             </div>
-            <div className="text-slate-500">
-              We’ll analyze your local store (in the country you're currently in) — signage, speech, tone — and suggest how to sound more modern and native.
-            </div>
+            <div className="text-slate-500">{pricing.plans.audit.desc}</div>
           </div>
-          <div className="font-medium mb-3">Includes:</div>
+          <div className="font-medium mb-3">{pricing.includes_label}</div>
           <ul className="text-slate-500 space-y-3 grow mb-6">
-            <li>🕵️ English vibe audit</li>
-            <li>📊 Video & bio feedback</li>
-            <li>🎯 Accent, phrases, energy tips</li>
-            <li>📥 Delivered in 48 hours</li>
+            {pricing.plans.audit.features.map((feature: string, index: number) => (
+              <li key={index}>{feature}</li>
+            ))}
           </ul>
           <div className="p-3 rounded-sm bg-slate-50">
             <a
-              href="https://wa.me/1234567890?text=Hi!%20I%20want%20a%20Western%20English%20Audit%20for%20my%20store."
+              href={`https://wa.me/1234567890?text=${encodeURIComponent(pricing.plans.audit.whatsapp_msg)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
             >
-              Get Audit <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
+              {pricing.plans.audit.button} <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
             </a>
           </div>
         </div>
@@ -140,28 +133,27 @@ export default function PricingTables() {
         {/* Content Assistance */}
         <div className="relative flex flex-col h-full px-6 py-5 bg-white shadow-lg" data-aos="fade-up" data-aos-delay="100">
           <div className="mb-4 pb-4 border-b border-slate-200">
-            <div className="text-lg font-semibold text-slate-800 mb-1">Content Assistance</div>
+            <div className="text-lg font-semibold text-slate-800 mb-1">{pricing.plans.content.name}</div>
             <div className="inline-flex items-baseline mb-3">
-              <span className="h2 leading-7 font-playfair-display text-slate-800">TBD</span>
-              <span className="font-medium text-slate-400"> / project</span>
+              <span className="h2 leading-7 font-playfair-display text-slate-800">{pricing.plans.content.price}</span>
+              <span className="font-medium text-slate-400"> {pricing.plans.content.billing}</span>
             </div>
-            <div className="text-slate-500">Need help editing your videos or creating engaging content in English? We’ve got your back.</div>
+            <div className="text-slate-500">{pricing.plans.content.desc}</div>
           </div>
-          <div className="font-medium mb-3">Includes:</div>
+          <div className="font-medium mb-3">{pricing.includes_label}</div>
           <ul className="text-slate-500 space-y-3 grow mb-6">
-            <li>✂️ Video editing tips or support</li>
-            <li>📄 English caption clean-up</li>
-            <li>🎬 Feedback on hooks & delivery</li>
-            <li>🧑‍🎨 Collaboration on scripts & stories</li>
+            {pricing.plans.content.features.map((feature: string, index: number) => (
+              <li key={index}>{feature}</li>
+            ))}
           </ul>
           <div className="p-3 rounded-sm bg-slate-50">
             <a
-              href="https://wa.me/1234567890?text=Hi!%20I'm%20interested%20in%20Content%20Assistance%20for%20my%20videos."
+              href={`https://wa.me/1234567890?text=${encodeURIComponent(pricing.plans.content.whatsapp_msg)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-sm text-white bg-slate-600 hover:bg-slate-700 w-full group"
             >
-              Request Support <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
+              {pricing.plans.content.button} <span className="text-slate-300 group-hover:translate-x-0.5 ml-1 transition-transform">-&gt;</span>
             </a>
           </div>
         </div>
